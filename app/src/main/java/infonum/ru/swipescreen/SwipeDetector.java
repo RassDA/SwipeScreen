@@ -1,6 +1,11 @@
 package infonum.ru.swipescreen;
 
+import android.content.Intent;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.widget.Toast;
+
+import static infonum.ru.swipescreen.MainActivity.context;
 
 /**
  * Created by d1i on 11.04.15.
@@ -53,8 +58,49 @@ public class SwipeDetector {
                 && isSwipeSpeed(velocity);
     }
 
+    public static GestureDetector initGestureDetector() {
+        return new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
 
+            private SwipeDetector detector = new SwipeDetector();
 
-}
+            public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+                                   float velocityY) {
+                try {
+                    if (detector.isSwipeDown(e1, e2, velocityY)) {
+                        showToast("Down Swipe"); //не должно быть такого движения - конкурирует с открытием извещений
+                        return false;
+
+                    } else if (detector.isSwipeUp(e1, e2, velocityY)) {
+                        showToast("Up Swipe");
+
+                    } else if (detector.isSwipeLeft(e1, e2, velocityX)) {
+
+                        showToast("Left Swipe");
+
+                        //nextScreen("Left Swipe");
+                        Intent intent = new Intent(context, Activity2.class);
+                        context.startActivity(intent);
+
+                    } else if (detector.isSwipeRight(e1, e2, velocityX)) {
+
+                        showToast("Right Swipe");
+
+                        //prevScreen("Right Swipe");
+                        Intent intent = new Intent(context, MainActivity.class);
+                        context.startActivity(intent);
+                    }
+                } catch (Exception e) {
+                } //for now, ignore
+                return false;
+            }
+
+            private void showToast(String phrase) {
+                Toast.makeText(context, phrase, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    }
 
 

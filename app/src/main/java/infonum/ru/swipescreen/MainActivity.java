@@ -11,14 +11,18 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import static infonum.ru.swipescreen.SwipeDetector.*;
+
 
 public class MainActivity extends ActionBarActivity {
 
-    Context context;
+    static Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        context = getApplicationContext();
         setContentView(R.layout.activity_main);
 
         final GestureDetector gestureDetector;
@@ -26,7 +30,6 @@ public class MainActivity extends ActionBarActivity {
         gestureDetector = initGestureDetector();
 
         View view = findViewById(R.id.LinearLayout1);
-        //view.setEnabled(false);
 
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
@@ -37,54 +40,6 @@ public class MainActivity extends ActionBarActivity {
         view.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
             }
-        });
-
-
-
-
-    }
-
-
-
-
-    private GestureDetector initGestureDetector() {
-        return new GestureDetector(getApplicationContext(), new GestureDetector.SimpleOnGestureListener() {
-
-        private SwipeDetector detector = new SwipeDetector();
-
-        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
-                               float velocityY) {
-            try {
-                if (detector.isSwipeDown(e1, e2, velocityY)) {
-                    showToast("Down Swipe"); //не должно быть такого движения - конкурирует с открытием извещений
-                    return false;
-
-                } else if (detector.isSwipeUp(e1, e2, velocityY)) {
-                    showToast("Up Swipe");
-
-                }else if (detector.isSwipeLeft(e1, e2, velocityX)) {
-
-                    showToast("Left Swipe");
-
-                    //nextScreen("Left Swipe");
-                    Intent intent = new Intent(getApplicationContext(), Activity2. class );
-                    startActivity(intent);
-
-                } else if (detector.isSwipeRight(e1, e2, velocityX)) {
-
-                    showToast("Right Swipe");
-
-                    //prevScreen("Right Swipe");
-                    //Intent intent = new Intent(getApplicationContext(), MainActivity. class );
-                    //startActivity(intent);
-                }
-            } catch (Exception e) {} //for now, ignore
-            return false;
-        }
-
-        private void showToast(String phrase){
-            Toast.makeText(getApplicationContext(), phrase, Toast.LENGTH_SHORT).show();
-        }
     });
 
 
@@ -92,12 +47,19 @@ public class MainActivity extends ActionBarActivity {
 
 
 
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
