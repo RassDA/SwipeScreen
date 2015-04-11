@@ -5,6 +5,8 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
+import static infonum.ru.swipescreen.Intents.*;
+import static infonum.ru.swipescreen.Intents.nextScreen;
 import static infonum.ru.swipescreen.MainActivity.context;
 
 /**
@@ -77,17 +79,16 @@ public class SwipeDetector {
 
                         showToast("Left Swipe");
 
-                        //nextScreen("Left Swipe");
-                        Intent intent = new Intent(context, Activity2.class);
-                        context.startActivity(intent);
+                        nextScreen();
+
 
                     } else if (detector.isSwipeRight(e1, e2, velocityX)) {
 
                         showToast("Right Swipe");
 
-                        //prevScreen("Right Swipe");
-                        Intent intent = new Intent(context, MainActivity.class);
-                        context.startActivity(intent);
+                        prevScreen();
+                        //Intent intent = new Intent(context, MainActivity.class);
+                        //context.startActivity(intent);
                     }
                 } catch (Exception e) {
                 } //for now, ignore

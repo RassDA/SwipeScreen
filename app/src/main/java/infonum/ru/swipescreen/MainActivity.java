@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
 import static infonum.ru.swipescreen.SwipeDetector.*;
 
@@ -17,6 +16,7 @@ import static infonum.ru.swipescreen.SwipeDetector.*;
 public class MainActivity extends ActionBarActivity {
 
     static Context context;
+    View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +24,11 @@ public class MainActivity extends ActionBarActivity {
 
         context = getApplicationContext();
         setContentView(R.layout.activity_main);
+        view = findViewById(R.id.LinearLayout1);
 
         final GestureDetector gestureDetector;
 
         gestureDetector = initGestureDetector();
-
-        View view = findViewById(R.id.LinearLayout1);
 
         view.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
@@ -40,14 +39,15 @@ public class MainActivity extends ActionBarActivity {
         view.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
             }
-    });
+        });
+
+
+
+    }
 
 
 
 
-
-
-}
 
 
 
