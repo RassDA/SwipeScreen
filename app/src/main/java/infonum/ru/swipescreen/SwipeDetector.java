@@ -70,10 +70,14 @@ public class SwipeDetector {
                 try {
                     if (detector.isSwipeDown(e1, e2, velocityY)) {
                         showToast("Down Swipe"); //не должно быть такого движения - конкурирует с открытием извещений
+                        upScreen();
+
                         return false;
 
                     } else if (detector.isSwipeUp(e1, e2, velocityY)) {
                         showToast("Up Swipe");
+                        downScreen();
+
 
                     } else if (detector.isSwipeLeft(e1, e2, velocityX)) {
 
@@ -87,8 +91,6 @@ public class SwipeDetector {
                         showToast("Right Swipe");
 
                         prevScreen();
-                        //Intent intent = new Intent(context, MainActivity.class);
-                        //context.startActivity(intent);
                     }
                 } catch (Exception e) {
                 } //for now, ignore

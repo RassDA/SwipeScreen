@@ -23,12 +23,6 @@ public class MainActivity extends ActionBarActivity {
         context = getApplicationContext();
         view = findViewById(R.id.LinearLayout1);
 
-        //Intent intent = new Intent(context,Activity2.class);
-        Intent intent = new Intent("ru.infonum.swipescreen.shownext");
-        context.startActivity(intent);
-
-
-/*
         final GestureDetector gestureDetector;
 
         gestureDetector = initGestureDetector();
@@ -43,8 +37,6 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View arg0) {
             }
         });
-
-*/
 
     }
 
