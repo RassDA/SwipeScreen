@@ -13,10 +13,10 @@
 
     <string name="next_word">Next word</string>
     <string name="take_quiz">Take quiz</string>
-    <string name="title_activity_activity1">Activity5</string>
-    <string name="title_activity_activity2">Activity5</string>
-    <string name="title_activity_activity3">Activity5</string>
-    <string name="title_activity_activity4">Activity5</string>
+    <string name="title_activity_activity1">Activity1</string>
+    <string name="title_activity_activity2">Activity2</string>
+    <string name="title_activity_activity3">Activity3</string>
+    <string name="title_activity_activity4">Activity4</string>
     <string name="title_activity_activity5">Activity5</string>
     <string name="activity1_action_name">ru.infonum.swipescreen.action.activity1</string>
     <string name="activity2_action_name">ru.infonum.swipescreen.action.activity2</string>
