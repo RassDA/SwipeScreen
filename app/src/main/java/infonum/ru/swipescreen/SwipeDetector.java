@@ -1,6 +1,5 @@
 package infonum.ru.swipescreen;
 
-import android.content.Intent;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.Toast;

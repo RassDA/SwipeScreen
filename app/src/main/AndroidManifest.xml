@@ -7,47 +7,51 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/act1_title" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="@string/activity1_action_name"/>
+                <action android:name="ru.infonum.swipescreen.action.activity1"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".Activity2"
-            android:label="@string/app_name" >
+            android:label="@string/act2_title" >
             <intent-filter>
                 <action android:name="@string/activity2_action_name"/>
+                <action android:name="ru.infonum.swipescreen.action.activity2"/>
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Activity3"
-            android:label="@string/app_name" >
+            android:label="@string/act3_title" >
             <intent-filter>
-                <action android:name="@string/activity3_action_name"/>
+                <action android:name="ru.infonum.swipescreen.action.activity3"/>
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Activity4"
-            android:label="@string/app_name" >
+            android:label="@string/act4_title" >
             <intent-filter>
-                <action android:name="@string/activity4_action_name"/>
+                <action android:name="ru.infonum.swipescreen.action.activity4"/>
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Activity5"
-            android:label="@string/title_activity_activity5" >
+            android:label="@string/act5_title" >
             <intent-filter>
-                <action android:name="@string/activity5_action_name"/>
+                <action android:name="ru.infonum.swipescreen.action.activity5"/>
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

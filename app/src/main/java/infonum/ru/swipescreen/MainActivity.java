@@ -1,12 +1,12 @@
 package infonum.ru.swipescreen;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
 import static infonum.ru.swipescreen.SwipeDetector.*;
 
@@ -14,14 +14,18 @@ import static infonum.ru.swipescreen.SwipeDetector.*;
 public class MainActivity extends ActionBarActivity {
 
     static Context context;
-    static View view;
+    static TextView view;
+    static TextView view2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
-        view = findViewById(R.id.LinearLayout1);
+        view = (TextView) findViewById(R.id.textView);
+        view2 = (TextView) findViewById(R.id.textView2);
+        view.setText(context.getString(R.string.activity2_action_name));
+
 
         final GestureDetector gestureDetector;
 
