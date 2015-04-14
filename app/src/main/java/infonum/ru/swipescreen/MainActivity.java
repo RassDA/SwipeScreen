@@ -16,6 +16,12 @@ public class MainActivity extends ActionBarActivity {
     static Context context;
     static TextView view;
     static TextView view2;
+    static int lastActivity = 1;
+    static int swipeDirection = 0;
+    final static int LEFT = 1;
+    final static int RIGHT = 2;
+    final static int UP = 3;
+    final static int DOWN = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

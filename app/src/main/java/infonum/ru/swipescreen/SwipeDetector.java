@@ -6,7 +6,12 @@ import android.widget.Toast;
 
 import static infonum.ru.swipescreen.Intents.*;
 import static infonum.ru.swipescreen.Intents.nextScreen;
+import static infonum.ru.swipescreen.MainActivity.DOWN;
+import static infonum.ru.swipescreen.MainActivity.LEFT;
+import static infonum.ru.swipescreen.MainActivity.RIGHT;
+import static infonum.ru.swipescreen.MainActivity.UP;
 import static infonum.ru.swipescreen.MainActivity.context;
+import static infonum.ru.swipescreen.MainActivity.swipeDirection;
 
 /**
  * Created by d1i on 11.04.15.
@@ -68,17 +73,24 @@ public class SwipeDetector {
                                    float velocityY) {
                 try {
                     if (detector.isSwipeDown(e1, e2, velocityY)) {
+                        swipeDirection = DOWN;
+                        chooseScreen(swipeDirection);
                         showToast("Down Swipe"); //не должно быть такого движения - конкурирует с открытием извещений
                         upScreen();
 
                         return false;
 
                     } else if (detector.isSwipeUp(e1, e2, velocityY)) {
+                        swipeDirection = UP;
+                        chooseScreen(swipeDirection);
+
                         showToast("Up Swipe");
                         downScreen();
 
 
                     } else if (detector.isSwipeLeft(e1, e2, velocityX)) {
+                        swipeDirection = LEFT;
+                        chooseScreen(swipeDirection);
 
                         showToast("Left Swipe");
 
@@ -86,6 +98,8 @@ public class SwipeDetector {
 
 
                     } else if (detector.isSwipeRight(e1, e2, velocityX)) {
+                        swipeDirection = RIGHT;
+                        chooseScreen(swipeDirection);
 
                         showToast("Right Swipe");
 
