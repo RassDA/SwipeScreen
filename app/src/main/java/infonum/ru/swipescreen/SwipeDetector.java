@@ -76,7 +76,7 @@ public class SwipeDetector {
                         swipeDirection = DOWN;
                         chooseScreen(swipeDirection);
                         showToast("Down Swipe"); //не должно быть такого движения - конкурирует с открытием извещений
-                        upScreen();
+                        //upScreen();
 
                         return false;
 
@@ -85,7 +85,7 @@ public class SwipeDetector {
                         chooseScreen(swipeDirection);
 
                         showToast("Up Swipe");
-                        downScreen();
+                        //downScreen();
 
 
                     } else if (detector.isSwipeLeft(e1, e2, velocityX)) {
@@ -94,7 +94,7 @@ public class SwipeDetector {
 
                         showToast("Left Swipe");
 
-                        nextScreen();
+                        //nextScreen();
 
 
                     } else if (detector.isSwipeRight(e1, e2, velocityX)) {
@@ -103,7 +103,7 @@ public class SwipeDetector {
 
                         showToast("Right Swipe");
 
-                        prevScreen();
+                        //prevScreen();
                     }
                 } catch (Exception e) {
                 } //for now, ignore
