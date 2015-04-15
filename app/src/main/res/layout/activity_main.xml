@@ -14,5 +14,5 @@
         android:layout_height="match_parent"
         android:text="1"
         android:id="@+id/textView"
-        android:textSize="100dp" />
+        android:textSize="50dp" />
 </LinearLayout>
