@@ -10,20 +10,26 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
 
+    <string name="title_activity_activity0">Activity0</string>
     <string name="title_activity_activity1">Activity1</string>
     <string name="title_activity_activity2">Activity2</string>
     <string name="title_activity_activity3">Activity3</string>
     <string name="title_activity_activity4">Activity4</string>
     <string name="title_activity_activity5">Activity5</string>
+    <string name="title_activity_activity6">Activity6</string>
+    <string name="activity0_action_name">ru.infonum.swipescreen.action.activity0</string>
     <string name="activity1_action_name">ru.infonum.swipescreen.action.activity1</string>
     <string name="activity2_action_name">ru.infonum.swipescreen.action.activity2</string>
     <string name="activity3_action_name">ru.infonum.swipescreen.action.activity3</string>
     <string name="activity4_action_name">ru.infonum.swipescreen.action.activity4</string>
     <string name="activity5_action_name">ru.infonum.swipescreen.action.activity5</string>
+    <string name="activity6_action_name">ru.infonum.swipescreen.action.activity6</string>
+    <string name="act0_title">Activity0</string>
     <string name="act1_title">Activity1</string>
     <string name="act2_title">Activity2</string>
     <string name="act3_title">Activity3</string>
     <string name="act4_title">Activity4</string>
     <string name="act5_title">Activity5</string>
+    <string name="act6_title">Activity6</string>
 
 </resources>

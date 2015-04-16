@@ -20,6 +20,15 @@
         </activity>
 
         <activity
+            android:name=".Activity1"
+            android:label="@string/act1_title" >
+            <intent-filter>
+                <action android:name="ru.infonum.swipescreen.action.activity1"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Activity2"
             android:label="@string/act2_title" >
             <intent-filter>
@@ -52,6 +61,15 @@
             android:label="@string/act5_title" >
             <intent-filter>
                 <action android:name="ru.infonum.swipescreen.action.activity5"/>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity6"
+            android:label="@string/act6_title" >
+            <intent-filter>
+                <action android:name="ru.infonum.swipescreen.action.activity6"/>
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

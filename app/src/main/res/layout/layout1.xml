@@ -4,13 +4,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/linearLayout5"
+    android:id="@+id/linearLayout1"
     android:background="#d5e6e632">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:text="5"
-        android:id="@+id/textView5"
+        android:text="1"
+        android:id="@+id/textView1"
         android:textSize="100dp" />
 </LinearLayout>
