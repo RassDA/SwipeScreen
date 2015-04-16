@@ -16,4 +16,9 @@ public class Activity1 extends Activity {
         Listeners.listen(findViewById(R.id.textView1));
         //Listeners.listen(viewList.get(1));
     }
+
+    //protected void onPause(){
+    //    FinishManager.addActivity(this);
+    //}
+
 }
